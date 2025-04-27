@@ -12,8 +12,8 @@ using namespace chrono;
 // g++ main.cpp train.cpp guessing.cpp md5.cpp -o main -O2
 
 // g++ main.cpp train.cpp guessing.cpp md5.cpp -o test.exe
-// g++ main.cpp train.cpp guessing.cpp md5.cpp -o test.exe -O1
-// g++ main.cpp train.cpp guessing.cpp md5.cpp -o test.exe -O2
+// g++ main.cpp train.cpp guessing.cpp md5.cpp -o test1.exe -O1
+// g++ main.cpp train.cpp guessing.cpp md5.cpp -o test2.exe -O2
 int main1()
 {
     double time_hash = 0;  // 用于MD5哈希的时间

@@ -8,8 +8,8 @@ using namespace chrono;
 const int NUM_MESSAGES = 4;
 // 编译指令如下
 // g++ main_SIMD.cpp train.cpp guessing.cpp md5_SIMD.cpp -o test_SIMD.exe
-// g++ main.cpp train.cpp guessing.cpp md5.cpp -o main -O1
-// g++ main.cpp train.cpp guessing.cpp md5.cpp -o main -O2
+// g++ main_SIMD.cpp train.cpp guessing.cpp md5_SIMD.cpp -o test_SIMD1.exe -O1
+// g++ main_SIMD.cpp train.cpp guessing.cpp md5_SIMD.cpp -o test_SIMD2.exe -O2
 int main()
 {
     double time_hash = 0;  // 用于MD5哈希的时间

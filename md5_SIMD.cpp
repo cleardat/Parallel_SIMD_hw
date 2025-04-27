@@ -13,7 +13,7 @@ const int NUM_MESSAGES = 4;
  * @param[out] n_byte 用于给调用者传递额外的返回值，即最终Byte数组的长度
  * @return Byte消息数组
  */
-Byte *StringProcess(string input, int *n_byte)
+Byte *StringProcess_P(string input, int *n_byte)
 {
 	// 将输入的字符串转换为Byte为单位的数组
 	Byte *blocks = (Byte *)input.c_str();
@@ -28,7 +28,7 @@ Byte *StringProcess(string input, int *n_byte)
 	int paddingBits = bitLength % 512;
 	if (paddingBits > 448)
 	{
-		paddingBits += 512 - (paddingBits - 448);
+		paddingBits = 512 - (paddingBits - 448);
 	}
 	else if (paddingBits < 448)
 	{
@@ -87,7 +87,8 @@ void MD5Hash_SIMD(string inputs[], bit32 states[][4]) {
 
     // 填充每个消息
     for (int i = 0; i < NUM_MESSAGES; i++) {
-        paddedMessages[i] = StringProcess(inputs[i], &messageLengths[i]);
+        paddedMessages[i] = StringProcess_P(inputs[i], &messageLengths[i]);
+		cout<<i<<"个消息的处理值(SIMD)是"<<paddedMessages[i]<<endl;
         max_blocks = max(max_blocks, messageLengths[i] / 64);
     }
 
