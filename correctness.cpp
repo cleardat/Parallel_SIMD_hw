@@ -7,7 +7,7 @@ using namespace std;
 using namespace chrono;
 
 // 编译指令如下：
-// g++ correctness.cpp train.cpp guessing.cpp md5.cpp -o test.exe
+// g++ correctness.cpp train.cpp guessing.cpp md5.cpp -o testc.exe
 
 
 // 通过这个函数，你可以验证你实现的SIMD哈希函数的正确性
