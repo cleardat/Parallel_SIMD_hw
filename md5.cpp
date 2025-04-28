@@ -88,8 +88,6 @@ void MD5Hash(string input, bit32 *state)
 	for (int i = 0; i < 1; i += 1)
 	{
 		paddedMessage = StringProcess(input, &messageLength[i]);
-		cout<<"消息的处理值(串行)是"<<paddedMessage<<endl;
-		// cout<<messageLength[i]<<endl;
 		assert(messageLength[i] == messageLength[0]);
 	}
 	int n_blocks = messageLength[0] / 64;
